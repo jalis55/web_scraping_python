@@ -10,15 +10,20 @@ try:
     soup = BeautifulSoup(response.text, 'html.parser')
     # print(soup.prettify())
     data_set = soup.find_all("div", class_="lister-item mode-detail")
-    title = []
-    rating = []
+    titles = []
+    ratings = []
     for data in data_set:
         title = data.find("h3")
         rating = data.find("span", class_="ipl-rating-star__rating")
         # links = data.find("a", href=True, class_="btn-full retina")["href"]
-        print(title.text)
-        print(rating.text)
+        # print(title.text)
+        # print(rating.text)
         # print(links)
         # break
+        titles.append(title.text)
+        ratings.append(rating.text)
+
+    print(titles)
+
 except Exception as e:
     print(e)
