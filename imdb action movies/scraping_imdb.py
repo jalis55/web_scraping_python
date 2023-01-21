@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 
 url = "https://www.imdb.com/list/ls063897780/"
 
@@ -16,13 +17,6 @@ try:
         title = data.find("h3")
         rating = data.find("span", class_="ipl-rating-star__rating")
         # links = data.find("a", href=True, class_="btn-full retina")["href"]
-        # print(title.text)
-        # print(rating.text)
-        # print(links)
-        # break
-        titles.append(title.text)
-        ratings.append(rating.text)
-
     print(titles)
 
 except Exception as e:
