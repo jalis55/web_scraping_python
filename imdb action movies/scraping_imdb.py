@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-url = "https://www.imdb.com/list/ls063897780/"
+# url = "https://www.imdb.com/list/ls063897780/"
+url = "https://www.imdb.com/list/ls063897780/?sort=moviemeter,asc&st_dt=&mode=detail&page=1"
 
 
 try:
